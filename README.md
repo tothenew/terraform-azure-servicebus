@@ -1,7 +1,6 @@
 # Azure Service Bus feature
 
-<!-- [![Lint Status](https://github.com/tothenew/terraform-aws-template/workflows/Lint/badge.svg)](https://github.com/tothenew/terraform-aws-template/actions) -->
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md)
+[![Lint Status](https://github.com/tothenew/terraform-aws-template/workflows/Lint/badge.svg)](https://github.com/tothenew/terraform-aws-template/actions)
 [![LICENSE](https://img.shields.io/github/license/tothenew/terraform-aws-template)](https://github.com/tothenew/terraform-aws-template/blob/master/LICENSE)
 
 This is a template to use for baseline. The default actions will provide updates for section bitween Requirements and Outputs.
