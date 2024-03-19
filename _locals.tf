@@ -6,7 +6,7 @@ locals {
   default_tags = var.default_tags_enabled ? {
     env   = var.environment
     stack = var.stack
-  } : {} 
+  } : {}
 
   queues = try({ for q in var.servicebus_queues : q.name => q }, {})
   topics = try({ for t in var.servicebus_topics : t.name => t }, {})

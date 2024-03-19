@@ -65,7 +65,7 @@ variable "extra_tags" {
 variable "client_name" {
   description = "Client name/account used in naming"
   type        = string
-} 
+}
 
 variable "environment" {
   description = "Project environment"
@@ -163,7 +163,7 @@ variable "servicebus_queues" {
 variable "servicebus_topics" {
   type = list(object({
     name        = string
-    custom_name = optional(string) 
+    custom_name = optional(string)
 
     status = optional(string, "Active")
 

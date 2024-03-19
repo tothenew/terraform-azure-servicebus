@@ -1,15 +1,15 @@
 ## Users can create the resource group here 
 resource "azurerm_resource_group" "main" {
-  name     = "my-servicebus-rg1" 
-  location = "eastus" 
+  name     = "my-servicebus-rg1"
+  location = "eastus"
 }
 
 module "servicebus" {
-  source  = "../" 
+  source = "git::https://github.com/tothenew/terraform-azure-servicebus.git?ref=servicebus"
 
-  client_name    = "test" 
-  environment    = "dev"
-  stack          = "ci" 
+  client_name = "test"
+  environment = "dev"
+  stack       = "ci"
 
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
@@ -24,14 +24,14 @@ module "servicebus" {
   }
 
   # Network rules
-  network_rules_enabled    = false 
+  network_rules_enabled    = false
   trusted_services_allowed = true
-#   allowed_cidrs = [
-#     "1.2.3.4/32",
-#   ]
-#   subnet_ids = [
-#     data.azurerm_subnet.example.id,
-#   ]
+  #   allowed_cidrs = [
+  #     "1.2.3.4/32",
+  #   ]
+  #   subnet_ids = [
+  #     data.azurerm_subnet.example.id,
+  #   ]
 
   servicebus_queues = [{
     name                = "myqueue"
@@ -57,6 +57,6 @@ module "servicebus" {
   }]
 
   extra_tags = {
-    createdBy = "Deepak" 
+    createdBy = "Deepak"
   }
 }
