@@ -1,5 +1,11 @@
 .terraform
 .terraform.lock.hcl
-main.tf
 terraform.tfvars
 !examples/**/terraform.tfvars
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+**/.terraform.lock.hcl

@@ -89,20 +89,7 @@ module "servicebus" {
       send   = true
       manage = false
     }
-
-    subscriptions = [{
-      name = "mainsub"
-
-      max_delivery_count        = 10
-      enable_batched_operations = true
-      lock_duration             = 1 # 1 min
-    }]
   }]
-
-  logs_destinations_ids = [
-    module.logs.logs_storage_account_id,
-    module.logs.log_analytics_workspace_id
-  ]
 
   extra_tags = {
     foo = "bar"
